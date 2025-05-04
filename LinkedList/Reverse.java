@@ -50,12 +50,12 @@ class Reverse1 {
      class Recurssivereverse {
             public Node head;
             public Node tail;
-            private void reverse(Node node) {
+            private void reverse1(Node node) {
                 if (node.next == null) {
                     head = tail;
                     return;
                 }
-                reverse(node.next);
+                reverse1(node.next);
                 tail.next = node;
                 tail = node;
                 tail.next = null;
