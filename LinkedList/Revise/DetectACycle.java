@@ -1,5 +1,4 @@
-package LinkedList.Revise;
-
+package Revise;
 import java.util.HashMap;
 import java.util.Map;
 

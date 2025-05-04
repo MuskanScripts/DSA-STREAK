@@ -1,5 +1,3 @@
-package LinkedList;
-
 public class AddNumberLL {
 
     public Node addTwoNumbers(Node l1, Node l2) {

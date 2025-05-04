@@ -1,8 +1,5 @@
-package LinkedList.Revise;
-
+package Revise;
 import java.util.HashSet;
-
-import LinkedList.Node;
 
 public class IntersectionOfTwoLL {
     // 1st solution using two pointer approach

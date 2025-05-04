@@ -1,5 +1,3 @@
-package LinkedList;
-
 public class RemoveNthNode {
     // using brute force approach to remove the nth node from end of linked list
     // time complexity O(N+N-n) and space complexity O(1)

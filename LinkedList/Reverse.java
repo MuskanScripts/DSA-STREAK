@@ -1,4 +1,3 @@
-package LinkedList;
 import java.util.*;
 public class Reverse {
     //brute force using stack
@@ -22,7 +21,7 @@ return head;
 // 2nd solution is using iterative approach to reverse the linked list
 // time complexity O(N) and space complexity O(1)
 class Reverse1 {
-    public static Node ReverseLinkedListUsingStack(Node head) {
+    public static Node ReverseLinkedList(Node head) {
                 Node temp = head;
                 Node prev = null;
                 while(temp != null){
@@ -34,7 +33,7 @@ class Reverse1 {
         return prev;}
     }    
 
-    //* 3rd solution is using iterative approach to reverse the linked list
+    //recursive approach to reverse the linked list
     // time complexity O(N) and space complexity O(1)
     class Reverse2 {
         public Node reverseList(Node head) {
@@ -46,5 +45,22 @@ class Reverse1 {
             head.next = null;
          return newHead; }
         }    
+
+//Kunal's recurssive solution
+     class Recurssivereverse {
+            public Node head;
+            public Node tail;
+            private void reverse(Node node) {
+                if (node.next == null) {
+                    head = tail;
+                    return;
+                }
+                reverse(node.next);
+                tail.next = node;
+                tail = node;
+                tail.next = null;
+            }
+            
+        }
     
 

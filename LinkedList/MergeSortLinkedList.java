@@ -1,5 +1,5 @@
-public class MergeTwoSortedLL {
-    // Merge two sorted linked lists and return it as a new sorted list.
+public class MergeSortLinkedList {
+    // Merge MergeSortLinkedListd lists and return it as a new sorted list.
     //time complexity O(N+M) and space complexity O(1)
     // where N is the length of first linked list and M is the length of second linked list.
     public static ListNode merge(ListNode head1,ListNode head2){
@@ -29,26 +29,22 @@ public class MergeTwoSortedLL {
         }
         return ans.next;
     }
-}
-
-//Kunal's code of merge
-class InnerMergeTwoSortedLL {
-
-    ListNode merge(ListNode list1, ListNode list2) {
-        ListNode dummyHead = new ListNode(0);
-        ListNode tail = dummyHead;
-        while (list1 != null && list2 != null) {
-            if (list1.val < list2.val) {
-                tail.next = list1;
-                list1 = list1.next;
-                tail = tail.next;
-            } else {
-                tail.next = list2;
-                list2 = list2.next;
-                tail = tail.next;
-            }
+    public ListNode mergeSort(ListNode head) {
+        // base case
+        if (head == null || head.next == null) {
+            return head;
         }
-        tail.next = (list1 != null) ? list1 : list2;
-        return dummyHead.next;
+        // find the middle of the linked list
+        ListNode mid = FindMiddleElement.findMiddle(head);
+        ListNode left = head;
+        ListNode right = mid.next;
+        mid.next = null; // split the linked list into two halves
+
+        // recursively sort the left and right halves
+        left = mergeSort(left);
+        right = mergeSort(right);
+
+        // merge the sorted halves
+        return merge(left, right);
     }
 }

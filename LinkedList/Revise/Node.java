@@ -1,5 +1,4 @@
-package LinkedList.Revise;
-
+package Revise;
 public class Node {
 
     int data;

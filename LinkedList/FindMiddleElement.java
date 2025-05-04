@@ -1,10 +1,9 @@
-package LinkedList;
 public class FindMiddleElement {
     // using fast and slow pointer approach to find the middle element of linked list
     // time complexity O(N) and space complexity O(1)
-    static Node findMiddle(Node head) {
-        Node slow = head; 
-        Node fast = head;   
+    static ListNode findMiddle(ListNode head) {
+        ListNode slow = head; 
+        ListNode fast = head;   
         while (fast != null && fast.next != null && slow != null) {
             fast = fast.next.next;  
             slow = slow.next;        
@@ -16,12 +15,12 @@ public class FindMiddleElement {
 // using brute force approach to find the middle element of linked list
 // time complexity O(N+N/2) and space complexity O(1)
 class FindMiddleOfLinkedList {
-    static Node findMiddle(Node head) {
+    static ListNode findMiddle(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
 
-        Node temp = head;
+        ListNode temp = head;
         int count = 0;
 
         while (temp != null) {
